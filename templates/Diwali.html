@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #diwali-greetings {
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            display: none;
+        }
+
+        #diya {
+            width: 100px;
+            height: 150px;
+            background-color: #f0d500;
+            position: relative;
+            border-radius: 50%;
+            margin: 0 auto;
+            animation: glow 2s infinite;
+        }
+
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 10px 5px #f0d500;
+            }
+            50% {
+                box-shadow: 0 0 20px 10px #ffed4a;
+            }
+            100% {
+                box-shadow: 0 0 10px 5px #f0d500;
+            }
+        }
+
+        #message {
+            font-size: 24px;
+            color: #fff;
+        }
+
+        #showButton {
+            background-color: #f0d500;
+            color: #222;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <button id="showButton" onclick="showGreeting()">Show Diwali Greetings</button>
+    <div id="diwali-greetings">
+        <div id="diya"></div>
+        <p id="message">Happy Diwali!</p>
+    </div>
+
+    <script>
+        function showGreeting() {
+            document.getElementById('showButton').style.display = 'none';
+            document.getElementById('diwali-greetings').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
